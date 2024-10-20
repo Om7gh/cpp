@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   getter.cpp                                         :+:      :+:    :+:   */
+/*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/22 12:11:09 by omghazi           #+#    #+#             */
-/*   Updated: 2024/09/22 13:01:50 by omghazi          ###   ########.fr       */
+/*   Created: 2024/10/19 11:32:32 by omghazi           #+#    #+#             */
+/*   Updated: 2024/10/19 13:36:38 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.hpp"
+#include "ScavTrap.hpp"
 
-std::string     Contact::get_firstName(void)
+ScavTrap::ScavTrap( void )
+{}
+
+ScavTrap::ScavTrap( const std::string name )
 {
-        return (firstName);
+        this->energy_point = 50;
+        this->attack_damage = 20;
+        this->hit_point = 100;
+        this->name = name;
+        std::cout << "Constructor is called" << std::endl;
 }
 
-std::string     Contact::get_lastName(void)
+ScavTrap::~ScavTrap( void )
 {
-        return (lastName);
-}
-
-std::string     Contact::get_nickName(void)
-{
-        return (nickName);
-}
-
-std::string     Contact::get_phoneNo(void)
-{
-        return (phoneNo);
-}
-
-std::string     Contact::get_darkestSecret(void)
-{
-        return (darkestSecret);
+        std::cout << "Destructor is called" << std::endl;
 }

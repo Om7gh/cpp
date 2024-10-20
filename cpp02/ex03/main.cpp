@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/22 11:58:30 by omghazi           #+#    #+#             */
-/*   Updated: 2024/10/20 16:26:47 by omghazi          ###   ########.fr       */
+/*   Created: 2024/10/10 22:43:11 by omghazi           #+#    #+#             */
+/*   Updated: 2024/10/18 21:47:41 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#include "Point.hpp"
 
-#include "Contact.hpp"
-
-class PhoneBook
+int main()
 {
-        private:
-                Contact contacts[8];
-        public :
-                PhoneBook( void );
-                ~PhoneBook( void );
-                void            add_contact( void );
-                void            search_contact( void );
-                void            menu( void );
-} ;
+    Point a(0.0f, 0.0f);
+    Point b(4.0f, 0.0f);
+    Point c(2.0f, 3.0f);
 
-#endif
+    Point check(5.0f, 5.0f);
+
+    if (Point::bsp(a, b, c, check))
+        std::cout << "Inside the triangle" << std::endl;
+    else
+        std::cout << "Outside the triangle" << std::endl;
+
+    return (EXIT_SUCCESS);
+}

@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/10/07 14:58:08 by omghazi           #+#    #+#              #
-#    Updated: 2024/10/15 17:26:40 by omghazi          ###   ########.fr        #
+#    Created: 2024/10/09 15:08:45 by omghazi           #+#    #+#              #
+#    Updated: 2024/10/18 21:27:09 by omghazi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Zombie
+NAME = bsp
 
-SRC = Zombie.cpp main.cpp newZombie.cpp randomChump.cpp
+SRC = Fixed.cpp	Point.cpp bsp.cpp main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -22,9 +22,9 @@ CFLAGS = -Wall -Wextra -Werror
 
 all : $(NAME)
 
-$(NAME) : $(OBJ)
+$(NAME) : $(OBJ) Point.hpp Fixed.hpp
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-	printf '\033[1m\033[37m[ ✔ ] %s\n\033[0m' "Create Zombie"
+	printf '\033[1m\033[37m[ ✔ ] %s\n\033[0m' "Create bsp"
 
 %.o : %.cpp
 	$(CC) $(CFLAGS) -c $< -o $@

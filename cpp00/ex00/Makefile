@@ -12,7 +12,7 @@ all : $(NAME)
 
 $(NAME) : $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-	printf '\033[32m[ ✔ ] %s\n\033[0m' "Create megaphone"
+	printf '\033[1m\033[37m[ ✔ ] %s\n\033[0m' "Create megaphone"
 
 %.o : %.cpp
 	$(CC) $(CFLAGS) -c $< -o $@

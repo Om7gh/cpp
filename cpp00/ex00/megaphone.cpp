@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 18:16:04 by omghazi           #+#    #+#             */
-/*   Updated: 2024/08/18 13:05:17 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/10/17 13:56:00 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,20 @@
 
 int main(int argc, char **argv)
 {
-        for (int i = 1; i <= argc - 1; i++)
-            for (int j = 0; argv[i][j]; j++)
-                std::cout << (char)toupper(argv[i][j]);
+        std::string str;
+
+        for (int i = 1; i < argc ; i++)
+        {
+            str = argv[i];
+            for (size_t i = 0; i < str.length(); i++)
+            {
+                str.at(i) = toupper(str.at(i));
+                std::cout << str.at(i);
+            }
+        }
         if (argc == 1)
-            std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+            std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
+        else
+            std::cout << "" << std::endl;
         return (EXIT_SUCCESS);
 }

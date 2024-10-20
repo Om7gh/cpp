@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/10/07 14:58:08 by omghazi           #+#    #+#              #
-#    Updated: 2024/10/15 17:26:40 by omghazi          ###   ########.fr        #
+#    Created: 2024/10/19 11:24:49 by omghazi           #+#    #+#              #
+#    Updated: 2024/10/19 11:25:12 by omghazi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Zombie
+NAME = claptrap
 
-SRC = Zombie.cpp main.cpp newZombie.cpp randomChump.cpp
+SRC = ClapTrap.cpp	main.cpp	ScavTrap.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -22,11 +22,11 @@ CFLAGS = -Wall -Wextra -Werror
 
 all : $(NAME)
 
-$(NAME) : $(OBJ)
+$(NAME) : $(OBJ) 
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-	printf '\033[1m\033[37m[ ✔ ] %s\n\033[0m' "Create Zombie"
+	printf '\033[1m\033[37m[ ✔ ] %s\n\033[0m' "Create ClapTrap"
 
-%.o : %.cpp
+%.o : %.cpp ClapTrap.hpp ScavTrap.hpp
 	$(CC) $(CFLAGS) -c $< -o $@
 	printf '\033[0m[ ✔ ] %s\n\033[0m' "$<"
 

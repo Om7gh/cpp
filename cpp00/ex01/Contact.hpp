@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 12:00:24 by omghazi           #+#    #+#             */
-/*   Updated: 2024/09/23 12:23:14 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/10/17 14:12:43 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,24 @@
 
 #include <string>
 #include <iostream>
-#include <iomanip>
 
 class Contact
 {
-        std::string firstName;
-        std::string lastName;
-        std::string nickName;
-        std::string phoneNo;
-        std::string darkestSecret;
+        private:
+                int             __index;
+                std::string     __firstName;
+                std::string     __lastName;
+                std::string     __nickName;
+                std::string     __phoneNo;
+                std::string     __darkestSecret;
+                void            display_contacts( std::string contact_field );
         public :
-                void set_firstName(std::string first);
-                void set_lastName(std::string last);
-                void set_nickName(std::string nickname);
-                void set_phoneNo(std::string phone);
-                void set_darkestSecret(std::string secret);
-                std::string get_firstName(void);
-                std::string get_lastName(void);
-                std::string get_nickName(void);
-                std::string get_phoneNo(void);
-                std::string get_darkestSecret(void);
+                Contact( void );
+                ~Contact( void );
+                void    set_index( int index );
+                void    new_contact( void );
+                void    display_info( void );
+                void    display_full_info( void );
 } ;
 
 #endif

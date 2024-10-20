@@ -1,6 +1,6 @@
 NAME = phonebook
 
-SRC = phonebook.cpp getter.cpp setter.cpp
+SRC = phonebook.cpp main.cpp contact.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -12,7 +12,7 @@ all : $(NAME)
 
 $(NAME) : $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-	printf '\033[32m[ ✔ ] %s\n\033[0m' "Create phonebook"
+	printf '\033[1m\033[37m[ ✔ ] %s\n\033[0m' "Create phonebook"
 
 %.o : %.cpp Contact.hpp PhoneBook.hpp
 	$(CC) $(CFLAGS) -c $< -o $@
