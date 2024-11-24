@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 13:05:36 by omghazi           #+#    #+#             */
-/*   Updated: 2024/10/17 14:00:23 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/10/23 19:37:59 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int main()
 		{
 			phonebook.search_contact();
 			input.clear();
-		}
+		} 
 	} while (input.compare("EXIT"));
 	system("clear");
 	std::cout << "\t\033[1m\033[33m████████████████████████ EXIT ████████████████████████\033[0m" << std::endl;

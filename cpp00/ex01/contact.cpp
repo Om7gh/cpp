@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 16:26:19 by omghazi           #+#    #+#             */
-/*   Updated: 2024/10/20 16:29:04 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/10/24 18:10:09 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,11 @@ void	Contact::set_index( int i )
 	this->__index = i;
 }
 
+std::string	Contact::getFirstName( void )
+{
+	return (__firstName);
+}
+
 bool isNumber(const std::string& str)
 {
     for (size_t i = 0; i < str.length(); i++)
@@ -43,15 +48,25 @@ bool isNumber(const std::string& str)
 
 bool isTab(const std::string& str)
 {
-    for (size_t i = 0; i < str.length(); i++)
-    {
-        if (str.at(i) == '\t')
+	int	j;
+
+	j = 0;
+    	for (size_t i = 0; i < str.length(); i++)
+    	{
+		if (str.at(i) == ' ')
+			j++;
+    	    	if (str.at(i) == '\t')
+		{
+			std::cout << "\033[1;31mError: Phone number cannot have tabs !\033[0m" << std::endl;
+			return false;
+		}
+    	}
+	if (str[j] == '\0')
 	{
-		std::cout << "\033[1;31mError: Phone number cannot have tabs !\033[0m" << std::endl;
+		std::cout << "\033[1;31mError: Phone number cannot have only space !\033[0m" << std::endl;
 		return false;
 	}
-    }
-    return true;
+    	return true;
 }
 
 void	Contact::new_contact( void )
@@ -100,11 +115,14 @@ void	Contact::new_contact( void )
 
 void	Contact::display_contacts( std::string contact_field )
 {
-	if (contact_field.length() <= 10) {
+	if (contact_field.length() <= 10)
+	{
 		for (size_t i = 0; i < 10 - contact_field.length(); i++)
 			std::cout << " ";
 		std::cout << contact_field;
-	} else {
+	}
+	else
+	{
 		for (size_t i = 0; i < 9; i++)
 			std::cout << contact_field.at(i);
 		std::cout << ".";

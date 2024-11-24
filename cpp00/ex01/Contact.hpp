@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/22 12:00:24 by omghazi           #+#    #+#             */
-/*   Updated: 2024/10/17 14:12:43 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/10/23 19:55:36 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ class Contact
                 void    new_contact( void );
                 void    display_info( void );
                 void    display_full_info( void );
+                std::string    getFirstName(void );
 } ;
 
 #endif
