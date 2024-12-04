@@ -6,11 +6,11 @@
 #    By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/09 15:08:45 by omghazi           #+#    #+#              #
-#    Updated: 2024/10/19 10:01:41 by omghazi          ###   ########.fr        #
+#    Updated: 2024/10/21 11:38:07 by omghazi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = claptrap
+NAME = ClapTrap
 
 SRC = ClapTrap.cpp	main.cpp
 

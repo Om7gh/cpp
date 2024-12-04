@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 11:26:09 by omghazi           #+#    #+#             */
-/*   Updated: 2024/10/19 13:30:15 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/10/21 07:50:15 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,8 @@ class ScavTrap : public ClapTrap
         public:
                 ScavTrap( void );
                 ScavTrap( std::string name );
-                void attack(const std::string& target);
                 ~ScavTrap( void );
-                void attac_guard(const std::string& target);
+                void bot_attack(const std::string& target);
                 void guardGate( void );
 };
 

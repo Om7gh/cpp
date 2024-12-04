@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 21:49:05 by omghazi           #+#    #+#             */
-/*   Updated: 2024/10/10 22:02:23 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/10/29 14:24:41 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 const int Fixed::bit = 8;
 
-Fixed::Fixed( void )
+Fixed::Fixed( void ) : value(0)
 {
         std::cout << "Default constructor called" << std::endl;
 }

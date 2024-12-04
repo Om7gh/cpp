@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 20:41:45 by omghazi           #+#    #+#             */
-/*   Updated: 2024/10/08 11:50:26 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/10/25 11:07:50 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,16 @@ int main(int argc, char **argv)
         std::ifstream   read_from(file);
         if (!read_from.is_open())
                 return (std::cout << "can't open the file", EXIT_FAILURE);
-        std::ofstream   create_write("new_file.txt");
+        std::ofstream   create_write(file + ".replace");
         if (!create_write.is_open())
                 return (std::cout << "can't open the file", EXIT_FAILURE);
         while (std::getline(read_from, line))
-                output += line + "\n";
+        {
+                if (!read_from.eof())
+                        output += line + "\n";
+                else
+                        output += line;
+        }
         result = replaceOccurrences(output, str1, str2);
         create_write << result;
         read_from.close();

@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 22:17:10 by omghazi           #+#    #+#             */
-/*   Updated: 2024/10/10 22:36:32 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/12/04 20:16:59 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,7 @@ Fixed::Fixed(const Fixed &obj)
 
 Fixed   &Fixed::operator = ( const Fixed &obj )
 {
-        if (this != &obj)
-            this->value = obj.value;
+        (void)obj;
         return (*this);
 }
 

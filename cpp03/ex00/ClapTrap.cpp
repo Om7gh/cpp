@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 22:25:08 by omghazi           #+#    #+#             */
-/*   Updated: 2024/10/19 11:23:25 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/10/21 10:32:52 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,10 @@ void    ClapTrap::takeDamage(unsigned int amount)
 {
         if (hit_point > 0)
         {
-                hit_point -= amount;
+                if (amount >= hit_point)
+                        hit_point = 0;
+                else
+                        hit_point -= amount;
                 std::cout << "\t\033[1m\033[33m*\033[0m\t\033[1m\033[37mClapTrap " << name << " takes " << amount << " points of damage.\033[0m" << std::endl;
                 if (hit_point <= 0)
                 {

@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 11:25:43 by omghazi           #+#    #+#             */
-/*   Updated: 2024/10/19 11:25:45 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/10/31 12:25:58 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,17 @@
 
 ClapTrap::ClapTrap( void )
 {
+        std::cout << "\t\033[1m\033[33m*\033[0m\t\033[1m\033[33mClapTrap Constructor is called !\033[0m" << std::endl;
 }
 
 ClapTrap::ClapTrap( std::string name ) : name(name) , hit_point(10), energy_point(10), attack_damage(0)
 {
-        std::cout << "\t\033[1m\033[33m*\033[0m\t\033[1m\033[33mConstructor is called !\033[0m" << std::endl;
+        std::cout << "\t\033[1m\033[33m*\033[0m\t\033[1m\033[33mClapTrap Constructor is called !\033[0m" << std::endl;
 }
 
 ClapTrap::~ClapTrap( void )
 {
-        std::cout << "\t\033[1m\033[33m*\033[0m\t\033[1m\033[33mDestructor is called !\033[0m" << std::endl;
+        std::cout << "\t\033[1m\033[33m*\033[0m\t\033[1m\033[33mClapTrap Destructor is called !\033[0m" << std::endl;
 }
 
 void    ClapTrap::attack(const std::string& target)
@@ -40,13 +41,19 @@ void    ClapTrap::attack(const std::string& target)
                 energy_point--;
         }
         else
+        {
                 std::cout << "\t\033[1m\033[33m*\033[0m\tClapTrap " << name << " has no energy left for attacking." << std::endl;
+                return ;
+        }
 }
 void    ClapTrap::takeDamage(unsigned int amount)
 {
         if (hit_point > 0)
         {
-                hit_point -= amount;
+                if (amount >= hit_point)
+                        hit_point = 0;
+                else
+                        hit_point -= amount;
                 std::cout << "\t\033[1m\033[33m*\033[0m\t\033[1m\033[37mClapTrap " << name << " takes " << amount << " points of damage.\033[0m" << std::endl;
                 if (hit_point <= 0)
                 {

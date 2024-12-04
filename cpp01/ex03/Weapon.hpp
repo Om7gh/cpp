@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 18:36:09 by omghazi           #+#    #+#             */
-/*   Updated: 2024/10/07 20:34:28 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/10/25 14:33:27 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ class Weapon
                 std::string weapon;
         public:
                 Weapon( std::string initalWeapon );
-                void            setType( std::string weapon );
-                const std::string     &getType( void ) const;
+                const std::string       &getType( void ) const;
+                void                    setType( std::string weapon );
                 ~Weapon();
 };
 

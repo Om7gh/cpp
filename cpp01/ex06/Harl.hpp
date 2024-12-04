@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 14:24:06 by omghazi           #+#    #+#             */
-/*   Updated: 2024/10/08 15:39:32 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/10/25 14:14:20 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,16 @@
 #define HARL_HPP
 
 #include <iostream>
+
+typedef enum    level
+{
+        DEBUG,
+        INFO,
+        WARNING,
+        ERROR,
+        UNKNOWN
+} e_level;
+
 class Harl
 {
         private:

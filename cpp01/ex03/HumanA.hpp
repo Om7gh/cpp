@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 18:45:59 by omghazi           #+#    #+#             */
-/*   Updated: 2024/10/07 20:28:39 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/10/25 18:00:27 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 class HumanA
 {
         private:
-                std::string name;
                 Weapon &weapon;
+                std::string name;
         public:
                 HumanA( std::string humaneName, Weapon &weaponName );
                  void attack( void ) const;

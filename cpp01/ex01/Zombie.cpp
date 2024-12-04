@@ -6,20 +6,19 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:26:29 by omghazi           #+#    #+#             */
-/*   Updated: 2024/10/07 17:58:39 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/10/26 20:31:17 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie( std::string zombieName) : name(zombieName)
+Zombie::Zombie( const std::string& zombieName) : name(zombieName)
 {
-        
 }
 
 Zombie::Zombie( void )
 {
-
+        this->name = "Zombie";
 }
 
 Zombie::~Zombie( void )
@@ -29,5 +28,5 @@ Zombie::~Zombie( void )
 
 void    Zombie::announce()
 {
-        std::cout << Zombie::name << " BraiiiiiiinnnzzzZ..." << std::endl;
+        std::cout << name << " BraiiiiiiinnnzzzZ..." << std::endl;
 }

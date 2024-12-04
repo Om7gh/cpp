@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 17:58:52 by omghazi           #+#    #+#             */
-/*   Updated: 2024/10/18 21:48:42 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/10/29 18:41:14 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,7 @@ Point::~Point ( void )
 
 Point & Point::operator=(const Point &obj)
 {
+        if (this != &obj)
+                *this = obj;
         return (*this);
 }

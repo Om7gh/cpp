@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:26:47 by omghazi           #+#    #+#             */
-/*   Updated: 2024/10/07 17:49:09 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/10/25 11:11:39 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,12 @@ int main()
         i = 5;
         name = "zombie";
         zombie = zombieHorde(i, name);
+        if (!zombie)
+                return (1);
         i = 0;
         while (i < 5)
         {
-                zombie->announce();
+                zombie[i].announce();
                 i++;
         }
         delete[] zombie;

@@ -6,7 +6,7 @@
 /*   By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 15:18:30 by omghazi           #+#    #+#             */
-/*   Updated: 2024/10/07 17:16:00 by omghazi          ###   ########.fr       */
+/*   Updated: 2024/10/24 23:59:53 by omghazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ Zombie::~Zombie( void )
 
 void    Zombie::announce()
 {
-        std::cout << Zombie::name << " BraiiiiiiinnnzzzZ..." << std::endl;
+        std::cout << Zombie::name << " BraiiiiiiinnnzzzZ... " << std::endl;
 }

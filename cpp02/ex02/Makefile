@@ -6,7 +6,7 @@
 #    By: omghazi <omghazi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/09 15:08:45 by omghazi           #+#    #+#              #
-#    Updated: 2024/10/15 17:26:40 by omghazi          ###   ########.fr        #
+#    Updated: 2024/10/29 18:39:33 by omghazi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,9 +24,9 @@ all : $(NAME)
 
 $(NAME) : $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
-	printf '\033[1m\033[37m[ ✔ ] %s\n\033[0m' "Create harl"
+	printf '\033[1m\033[37m[ ✔ ] %s\n\033[0m' "Create fixed"
 
-%.o : %.cpp
+%.o : %.cpp Fixed.hpp
 	$(CC) $(CFLAGS) -c $< -o $@
 	printf '\033[0m[ ✔ ] %s\n\033[0m' "$<"
 
